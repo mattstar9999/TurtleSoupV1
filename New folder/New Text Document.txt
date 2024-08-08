@@ -1,0 +1,16 @@
+private DateTime entryTime;
+
+protected override void OnBarUpdate()
+{
+    if (Position.MarketPosition == MarketPosition.Long && entryTime == DateTime.MinValue)
+    {
+        entryTime = Time[0]; // Record the entry time
+    }
+
+    if (Position.MarketPosition == MarketPosition.Long && 
+        Time[0] >= entryTime.AddHours(1)) // Check if an hour has passed
+    {
+        // Adjust the stop loss or take some action
+        SetStopLoss(CalculationMode.Ticks, 20); // Example: set stop loss after an hour
+    }
+}

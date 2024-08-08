@@ -1,0 +1,14 @@
+Strategy
+
+Mark off the high and the low of the previous 1-hour candle
+
+On 1 min chart, if the candle closes above the previous 1-hour candle high, place a long trade
+
+On 1 min chart, if the candle closes below the previous 1-hour candle low, place a short trade
+
+On 1 min chart, if the candle crosses but doesnt close above the previous 1-hour candle high, place a short trade
+
+On 1 min chart, if the candle crosses but doesnt close below the previous 1-hour candle low, place a long trade
+
+Take profit should be a tick variable that the user can input
+Stop loss is a tick variable as well
