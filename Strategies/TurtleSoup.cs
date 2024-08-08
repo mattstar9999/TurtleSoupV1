@@ -209,7 +209,6 @@ namespace NinjaTrader.NinjaScript.Strategies
             if (Position.MarketPosition != MarketPosition.Flat && !stopLossIsExist)
             {
                     SetStopLoss();
-                
             }
             }
 
